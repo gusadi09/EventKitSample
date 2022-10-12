@@ -6,9 +6,15 @@
 //
 
 import SwiftUI
+import Shift
 
 @main
 struct EventKitSampleApp: App {
+
+	init() {
+		Shift.configureWithAppName("MyApp")
+	}
+	
     var body: some Scene {
         WindowGroup {
             ContentView()

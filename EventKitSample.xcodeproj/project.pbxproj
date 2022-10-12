@@ -11,6 +11,7 @@
 		EC90F0D628EC0CC00082EB0E /* ContentView.swift in Sources */ = {isa = PBXBuildFile; fileRef = EC90F0D528EC0CC00082EB0E /* ContentView.swift */; };
 		EC90F0D828EC0CC20082EB0E /* Assets.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = EC90F0D728EC0CC20082EB0E /* Assets.xcassets */; };
 		EC90F0DC28EC0CC20082EB0E /* Preview Assets.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = EC90F0DB28EC0CC20082EB0E /* Preview Assets.xcassets */; };
+		EC90F0E528EC0D680082EB0E /* Shift in Frameworks */ = {isa = PBXBuildFile; productRef = EC90F0E428EC0D680082EB0E /* Shift */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXFileReference section */
@@ -27,6 +28,7 @@
 			isa = PBXFrameworksBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
+				EC90F0E528EC0D680082EB0E /* Shift in Frameworks */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
@@ -38,6 +40,7 @@
 			children = (
 				EC90F0D228EC0CC00082EB0E /* EventKitSample */,
 				EC90F0D128EC0CC00082EB0E /* Products */,
+				EC90F0E328EC0D680082EB0E /* Frameworks */,
 			);
 			sourceTree = "<group>";
 		};
@@ -69,6 +72,13 @@
 			path = "Preview Content";
 			sourceTree = "<group>";
 		};
+		EC90F0E328EC0D680082EB0E /* Frameworks */ = {
+			isa = PBXGroup;
+			children = (
+			);
+			name = Frameworks;
+			sourceTree = "<group>";
+		};
 /* End PBXGroup section */
 
 /* Begin PBXNativeTarget section */
@@ -85,6 +95,9 @@
 			dependencies = (
 			);
 			name = EventKitSample;
+			packageProductDependencies = (
+				EC90F0E428EC0D680082EB0E /* Shift */,
+			);
 			productName = EventKitSample;
 			productReference = EC90F0D028EC0CC00082EB0E /* EventKitSample.app */;
 			productType = "com.apple.product-type.application";
@@ -113,6 +126,9 @@
 				Base,
 			);
 			mainGroup = EC90F0C728EC0CC00082EB0E;
+			packageReferences = (
+				EC90F0E228EC0CD70082EB0E /* XCRemoteSwiftPackageReference "Shift" */,
+			);
 			productRefGroup = EC90F0D128EC0CC00082EB0E /* Products */;
 			projectDirPath = "";
 			projectRoot = "";
@@ -269,6 +285,8 @@
 				ENABLE_HARDENED_RUNTIME = YES;
 				ENABLE_PREVIEWS = YES;
 				GENERATE_INFOPLIST_FILE = YES;
+				INFOPLIST_KEY_NSCalendarsUsageDescription = "use calendar usage to create event";
+				INFOPLIST_KEY_NSRemindersUsageDescription = "";
 				"INFOPLIST_KEY_UIApplicationSceneManifest_Generation[sdk=iphoneos*]" = YES;
 				"INFOPLIST_KEY_UIApplicationSceneManifest_Generation[sdk=iphonesimulator*]" = YES;
 				"INFOPLIST_KEY_UIApplicationSupportsIndirectInputEvents[sdk=iphoneos*]" = YES;
@@ -307,6 +325,8 @@
 				ENABLE_HARDENED_RUNTIME = YES;
 				ENABLE_PREVIEWS = YES;
 				GENERATE_INFOPLIST_FILE = YES;
+				INFOPLIST_KEY_NSCalendarsUsageDescription = "use calendar usage to create event";
+				INFOPLIST_KEY_NSRemindersUsageDescription = "";
 				"INFOPLIST_KEY_UIApplicationSceneManifest_Generation[sdk=iphoneos*]" = YES;
 				"INFOPLIST_KEY_UIApplicationSceneManifest_Generation[sdk=iphonesimulator*]" = YES;
 				"INFOPLIST_KEY_UIApplicationSupportsIndirectInputEvents[sdk=iphoneos*]" = YES;
@@ -354,6 +374,25 @@
 			defaultConfigurationName = Release;
 		};
 /* End XCConfigurationList section */
+
+/* Begin XCRemoteSwiftPackageReference section */
+		EC90F0E228EC0CD70082EB0E /* XCRemoteSwiftPackageReference "Shift" */ = {
+			isa = XCRemoteSwiftPackageReference;
+			repositoryURL = "https://github.com/vinhnx/Shift.git";
+			requirement = {
+				kind = upToNextMajorVersion;
+				minimumVersion = 0.9.0;
+			};
+		};
+/* End XCRemoteSwiftPackageReference section */
+
+/* Begin XCSwiftPackageProductDependency section */
+		EC90F0E428EC0D680082EB0E /* Shift */ = {
+			isa = XCSwiftPackageProductDependency;
+			package = EC90F0E228EC0CD70082EB0E /* XCRemoteSwiftPackageReference "Shift" */;
+			productName = Shift;
+		};
+/* End XCSwiftPackageProductDependency section */
 	};
 	rootObject = EC90F0C828EC0CC00082EB0E /* Project object */;
 }
